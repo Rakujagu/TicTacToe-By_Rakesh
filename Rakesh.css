@@ -1,0 +1,218 @@
+body{
+    background: url(https://media.istockphoto.com/photos/metal-tictactoe-game-pieces-picture-id168678735?b=1&k=6&m=168678735&s=170667a&w=0&h=-31Z3GQH75Ji84XE4_9uJva6R06G3n_8yc6wX89c1o0=);
+    /* background: url(https://cdn.pixabay.com/photo/2017/01/03/16/42/klee-1949946__480.jpg); */
+    font-family: 'Redressed', cursive;
+}
+.selectbox,.play-board{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.selectbox,.play-board, .result-box{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+.selectbox{
+    position: absolute;
+    top: 40%;
+    left:50%;
+    border: 2px solid green;
+    background:url(https://cdn.pixabay.com/photo/2012/03/09/13/47/neon-22534__480.jpg);
+    padding: 20px 20px;
+    border-radius: 8px;
+/* display: none; */
+}
+.selectbox h1{
+    border-bottom: 2px solid skyblue;
+    font-family: 'Bungee Outline', cursive;
+    color: aliceblue;
+
+}
+.selectbox.hide{
+    opacity: 0;
+    pointer-events: none;
+  }
+.title{
+    font-size: 20px;
+    font-weight: bold;
+   padding-bottom: 5px;
+text-align: center;
+color: azure;
+}
+.options button{
+    display: flex;
+justify-content: center;
+align-items: center;
+    border: 1px solid blueviolet;
+    color: blue;
+border-radius: 2px;
+background-color: yellowgreen;
+padding: 2px 2px;
+font-weight: bold;
+width: 100%;
+margin: 2px 2px;
+cursor: pointer;
+transition: all 0.1s ease;
+}
+.options button:hover{
+    transform: scale(0.96);
+    background: skyblue;
+    color: black;
+    box-shadow: 0px 0px 30px skyblue;
+    
+}
+.play-board{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  .play-board.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+.playboard .details{
+    /* position: absolute;
+    top: 30%;
+    left:40%; */
+    border: 1px solid green;
+    background:url(https://cdn.pixabay.com/photo/2016/07/13/12/51/bokeh-1514380__480.jpg);
+    padding: 7px ;
+    border-radius: 8px;
+    color: blue;
+   
+}
+.playboard .details .players{
+    display: flex;
+    position: relative;
+  justify-content: space-between;
+}
+.playboard .details span{
+    background: aquamarine;
+    width: 100%;
+    padding: 2px 2px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+position: relative;
+z-index: 5;
+transition: all 0.3s ease;
+}
+.players.active span:first-child{
+    color: #fff;
+  }
+  .players.active span:last-child{
+    color: #56baed;
+  }
+  .players span:first-child{
+    color: #fff;
+  }
+.details .slider{
+    position: absolute;
+    background: antiquewhite;
+    width: 50%;
+    height: 100%;
+z-index: 2;
+}
+.details span :first-child{
+    color:blueviolet
+}
+.players.active span :first-child{
+    color: skyblue;
+}
+.players.active span :nth-child(2){
+    color: white;
+}
+.players.active .slider{
+  left: 50%;
+}
+.playboard section{
+    display: flex;
+}
+.playboard section span{
+    display: block;
+
+    /* top: 40%;
+    left:40%;  */
+    background: aliceblue;
+ 
+    width: 80px;
+    height: 80px;
+    margin: 1px;
+    border: 2px solid red;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+}
+.playboard .play-area{
+  margin-top: 20px;   
+}
+/* .playboard{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9); 
+}
+.playboard.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} */
+.resultbox{
+    background: aqua;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%) scale(0.9); 
+    }
+    .playboard.show{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .result-box.show{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+      }
+.resultbox .wontext{
+    display: flex;  
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}
+.resultbox p{
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0px 5px; 
+    
+}
+.resultbox .btn{
+    display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.resultbox .btn button{
+    border: 1px solid blueviolet;
+    color: blue;
+border-radius: 2px;
+background-color: whitesmoke;
+padding: 2px 2px;
+font-weight: bold;
+
+margin: 2px 2px;
+cursor: pointer;
+transition: all 0.1s ease;  
+}
+.resultbox .btn button:hover{
+
+    transform: scale(0.96);
+    background:gold;
+    color: black;
+}
